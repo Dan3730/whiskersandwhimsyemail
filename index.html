@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Whiskers</title>
+<link rel="stylesheet" href="./email.css">
+<script defer src="./email.js"></script>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<header class="toolbar">
+  <div class="toolbar-left">
+    <a href="https://whiskersandwhimsy.netlify.app/" class="tool-btn">&#8962;</a>
+  </div>
+  <div class="toolbar-right">
+    <h2 class="page-title">Contact Us</h2>
+  </div>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="contact-wrapper">
+  <div class="contact-card">
+    <h1>Get In Touch</h1>
+    <p class="subtitle">
+      Questions, suggestions, collaborations,
+      or custom artwork requests.
+    </p>
+
+    <!-- FORM -->
+    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="subject" value="New message from Whiskers & Whimsy">
+      <p style="display:none">
+        <label>Don't fill this out: <input name="bot-field"></label>
+      </p>
+
+      <input type="text"
+             id="name"
+             name="name"
+             placeholder="Your Name"
+             required
+      >
+
+      <input type="email"
+             id="email"
+             name="email"
+             placeholder="Your Email"
+             required
+      >
+
+      <textarea id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+
+      <div id="formStatus" class="form-status"></div>
+    </form>
+
+    <div class="contact-note">
+      We typically respond within 24–48 hours.
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
